@@ -1,0 +1,48 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nopurpose"
+    android:versionCode="1"
+    android:versionName="v1 launching-phase-javaPacked"
+>
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <application
+        android:hasCode="false"
+        android:icon="@mipmap/gemini_generated"
+        android:label="No purpose app"
+    >
+
+        <!-- using .MainActivity fails, as Android tried to load a DEX class -->
+        <activity
+            android:name="android.app.NativeActivity"
+            android:label="Native UI"
+            android:exported="true"
+        >
+
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category
+                    android:name="android.intent.category.LAUNCHER"
+                />
+                    </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Java'd UI"
+            android:exported="true"
+        >
+
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category
+                    android:name="android.intent.category.LAUNCHER"
+                />
+                    </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

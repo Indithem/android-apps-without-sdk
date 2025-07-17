@@ -1,0 +1,4 @@
+makecapk.apk
+makecapk.apk.idsig
+*.keystore
+failure.log
